@@ -107,3 +107,22 @@ console.log(firstName, lastName);
 // This is useful when you want to avoid naming conflicts or when you want to use a more descriptive name for a property
 const {name: userName, age} = { name: "James", age: 35 };
 console.log(userName, age);
+
+
+// Example of using a prompt to ask the user for a password, and then checking if the entered password matches a predefined value
+const password = prompt('Please enter your password:');
+
+if (password === "Hello") {
+    console.log("Password is correct!");
+} else if (password === "hello") {
+    console.log("Password is correct, but please use a capital 'H' next time.");
+} else {
+    console.log("Incorrect password, please try again.");
+}
+
+// Example of using a for loop to iterate over an array of hobbies and log each hobby to the console
+const hobbies2 = ["Sports", "Cooking", "Reading"];
+
+for (const hobby of hobbies2) {
+    console.log(hobby);
+}
