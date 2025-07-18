@@ -21,6 +21,13 @@ const user = {
 console.log(user.name);
 user.greet();
 
+// Example of using the spread operator to create a new object that extends the user object
+const extendedUser = {
+    isAdmin: true,
+    ...user // Using the spread operator (...) to copy properties from the user object into the extendedUser
+}
+console.log(extendedUser);
+
 // Example of creating a class to represent a user, with a constructor to initialize properties
 // The class has a method called greet that logs a greeting message to the console
 // The class is instantiated to create a user object, which is then logged to the console
@@ -66,6 +73,12 @@ console.log(hobbies[0]);
 // Example of using the push method to add a new hobby to the array
 hobbies.push("Working");
 console.log(hobbies);
+
+// Examples using spread operator to merge arrays
+// The spread operator (...) allows you to expand an array into individual elements, instead of teating each array as a single element which would nest them as sub-arrays
+const moreHobbies = ["Gaming", "Traveling"];
+const mergedHobbies = [...hobbies, ...moreHobbies];
+console.log(mergedHobbies);
 
 // Example of using findIndex to find the index of a specific hobby in the array, in this case "Sports" which returns 0
 const index = hobbies.findIndex((item) => {
