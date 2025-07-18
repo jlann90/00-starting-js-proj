@@ -83,3 +83,14 @@ console.log(editedHobbies);
 // This is useful when you want to work with more complex data structures, such as when you want to display the hobbies in a list or table format
 const hobbiesWithKey = hobbies.map((item) => ({text: item}));
 console.log(hobbiesWithKey);
+
+// Example of destructuring an array to extract the first and last names of a user
+// This is a concise way to assign values from an array to variables, making the code cleaner
+const [firstName, lastName] = ["James", "Lannon"];
+console.log(firstName, lastName);
+
+// Example of destructuring an object to extract the name and age properties
+// This also has an example of how to use an alias for a property, where 'name' is renamed to 'userName'
+// This is useful when you want to avoid naming conflicts or when you want to use a more descriptive name for a property
+const {name: userName, age} = { name: "James", age: 35 };
+console.log(userName, age);
