@@ -19,3 +19,9 @@ const greeting1 = createGreeting("James");
 console.log(greeting1);
 const greeting2 = createGreeting("Joe", "Hello, what's up?");
 console.log(greeting2);
+
+// Example of an arrow function that does the same as createGreeting
+// This function also has a default message parameter
+export default (userName, message = "Hello!") => {
+    return "Hi, I am " + userName + ". " + message;
+}
