@@ -57,3 +57,29 @@ console.log(greeting2);
 export default (userName, message = "Hello!") => {
     return "Hi, I am " + userName + ". " + message;
 }
+
+// Example of using an array to store hobbies
+// Console logging the first hobby in the array
+const hobbies = ["Sports", "Cooking", "Reading"];
+console.log(hobbies[0]);
+
+// Example of using the push method to add a new hobby to the array
+hobbies.push("Working");
+console.log(hobbies);
+
+// Example of using findIndex to find the index of a specific hobby in the array, in this case "Sports" which returns 0
+const index = hobbies.findIndex((item) => {
+    return item === 'Sports';
+})
+// You could also further simplify the arrow function syntax like this:
+// const index = hobbies.findIndex((item) => item === 'Sports');
+console.log(index);
+
+// Example of using the map method to create a new array with each hobby followed by an exclamation mark, saved to a new variable called editedHobbies
+const editedHobbies = hobbies.map((item) => item + "!");
+console.log(editedHobbies);
+
+// Example of using the map method to create a new array of objects, where each object has a text property containing the hobby
+// This is useful when you want to work with more complex data structures, such as when you want to display the hobbies in a list or table format
+const hobbiesWithKey = hobbies.map((item) => ({text: item}));
+console.log(hobbiesWithKey);
