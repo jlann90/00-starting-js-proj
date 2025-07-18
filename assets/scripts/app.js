@@ -126,3 +126,30 @@ const hobbies2 = ["Sports", "Cooking", "Reading"];
 for (const hobby of hobbies2) {
     console.log(hobby);
 }
+
+//Example of using setTimeout to delay the execution of a function using classic function syntax
+function handleTimeout() {
+    console.log("Timed out!");
+}
+setTimeout(handleTimeout, 2000);
+
+//Example of using setTimeout to delay the execution of a function using arrow function syntax
+const handleTimeout2 = () => {
+    console.log("Timed out again!");
+}
+setTimeout(handleTimeout2, 2000);
+
+//Example of using setTimeout to delay the execution of a function using an anonymous function
+setTimeout(() => {
+    console.log("Timed out once more!");
+}, 2000);
+
+// Example of using a function as an argument to another function
+// This is a common pattern in JavaScript, especially when working with callbacks or higher-order functions
+function greeter(greetFn) {
+    greetFn();
+}
+
+greeter(() => 
+    console.log("Hello from the greeter function!")
+);
